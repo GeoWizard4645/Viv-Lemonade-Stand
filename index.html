@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="startContainer">
         <h1>Welcome to Viv Lemonade</h1>
         <p>To play, follow the on-screen instructions.</p>
         <p>You start with $50. Choose how many cups and advertising signs you want based on the weather which is randomly generated.</p>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div class="container" id="gameContainer" style="display: none;">
+        <h1>Viv Lemonade Stand</h1>
         <div id="gameArea">
             <p id="message"></p>
             <p id="money"></p>
@@ -21,8 +25,14 @@
             <input type="number" id="signs" min="0"><br>
             <label for="price">Price per cup of lemonade:</label>
             <input type="number" id="price" step="0.01" min="0"><br>
-            <button id="startBtn" onclick="startGame()">Start Game</button>
+            <button id="submitBtn" onclick="playRound()">Submit</button>
+            <button id="endBtn" onclick="endGame()">End Game</button>
         </div>
+    </div>
+    <div class="container" id="endContainer" style="display: none;">
+        <h1>Game Over</h1>
+        <p id="finalMessage"></p>
+        <button onclick="restartGame()">Play Again</button>
     </div>
     <script src="script.js"></script>
 </body>
