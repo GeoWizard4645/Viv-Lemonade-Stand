@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viv Lemonade Stand</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Viv Lemonade</h1>
+        <p>To play, follow the on-screen instructions.</p>
+        <p>You start with $50. Choose how many cups and advertising signs you want based on the weather which is randomly generated.</p>
+        <div id="gameArea">
+            <p id="message"></p>
+            <p id="money"></p>
+            <p id="weather"></p>
+            <label for="cups">Number of cups to make (costs 15 cents each):</label>
+            <input type="number" id="cups" min="0"><br>
+            <label for="signs">Number of advertising signs to buy (costs 50 cents each):</label>
+            <input type="number" id="signs" min="0"><br>
+            <label for="price">Price per cup of lemonade:</label>
+            <input type="number" id="price" step="0.01" min="0"><br>
+            <button id="startBtn" onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
